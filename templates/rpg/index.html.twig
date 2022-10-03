@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<link href="/template/rpg/style.css">
+<h1>Home des personnages</h1>
+<button onclick="window.location.href='/personnage/add';">Ajouter un personnage</button>
+<button onclick="window.location.href='/type';"> Voir les différents types de personnages</button>
+<div class="exemple-wrapper">
+    {% for personnage in personnages%}
+        <h2>{{personnage.nom}}</h2>
+        <img class="fit-picture" src="{{personnage.avatar}}">
+        <button onclick="window.location.href='personnage/{{ personnage.id}}';"> Plus d'infos</button>
+    {% endfor %}
+</div>
+
+{% endblock %}

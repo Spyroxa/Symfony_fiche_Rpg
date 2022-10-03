@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Informations du personnage</h1>
+<button onclick="window.location.href='/';"> Home</button>
+<div class="exemple-wrapper">
+        <h2>{{ personnage.nom }}</h2>
+        <p> {{personnage.description}}</p>
+        <p> {{personnage.datenaissance.format('d F Y')}}</p>
+        <p> Niveau : {{personnage.niveau}}</p>
+        <p> Expérience : {{personnage.experience}}</p>
+        <p> Point de vie : {{personnage.vie}}</p>
+        <p> <strong>Compétences </strong></p>
+        <p> Force : {{personnage.forces}}</p>
+        <p> Intelligence : {{personnage.intelligence}}</p>
+        <p> Endurance : {{personnage.endurance}}</p>
+        <p> Magie : {{personnage.magie}}</p>
+        <p> Agilite : {{personnage.agilite}}</p>
+        <img class="fit-picture" src="{{personnage.avatar}}">
+    <button onclick="window.location href="/personnage/delete/{{ personnage.id }}">Delete</button>
+    <button onclick="window.location.href='/personnage/edit/{{personnage.id}}';"> Modifier</button>
+</div>
+{% endblock %}

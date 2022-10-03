@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Home des types de personnage</h1>
+<button onclick="window.location.href='/';"> Home</button>
+<div class="exemple-wrapper">
+    {% for type in types%}
+        <h2>{{type.classe}}</h2>
+        <button onclick="window.location.href="/type/delete/{{ type.id }}">Delete</button>
+        <button onclick="window.location.href='/type/{{type.id}}';"> Modifier</button>
+    {% endfor %}
+</div>
+{% endblock %}

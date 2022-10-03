@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Personnage;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class PersonnageType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('nom')
+            ->add('date_naissance')
+            ->add('description')
+            ->add('niveau')
+            ->add('experience')
+            ->add('vie')
+            ->add('Forces')
+            ->add('Intelligence')
+            ->add('Endurance')
+            ->add('Magie')
+            ->add('Agilite')
+            ->add('avatar')
+            ->add('Type')
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => Personnage::class,
+        ]);
+    }
+}
