@@ -1,0 +1,23 @@
+.exemple-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-self: center;
+    margin: auto;
+}
+button{
+    
+    height: 2em;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 20%;
+}
+body{
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/41/671/736/video-game-hytale-hd-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
